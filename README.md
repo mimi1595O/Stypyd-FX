@@ -28,11 +28,11 @@ Basically, it's smarter than it looks.
 
 Seriously, if you've cloned this, you probably know what you're doing.
 
-1.  **Compile the C++ thing:**
+1.  **Compile the C++ thing:** //I COMPILED IT FOR LINUX BUT LINUX PEOPLE WOULD COMPILE IT THEMSELVES IN MOST CASES LOL -mimi//
     ```bash
     g++ -std=c++17 -pthread -o signal signalv_final.cpp
     ```
-2.  **Install the Python stuff:** //BRUH WHY AI DON"T TELL YOU TO USE VENV -mimi//
+2.  **Install the Python stuff:** //BRUH WHY AI DIDN'T TELL YOU TO USE VENV -mimi//
     ```bash
     pip install pandas yfinance
     ```
