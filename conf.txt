@@ -1,0 +1,1 @@
+EURUSD=X 5m 20
