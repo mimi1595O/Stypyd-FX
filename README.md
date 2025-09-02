@@ -43,7 +43,9 @@ Seriously, if you've cloned this, you probably know what you're doing.
     - First, get some data: `python datafetch_final.py`
     - Then, get some signals: `./signal conf.txt`
 
-### 🧠 A Quick Word From The Author
+### 🧠 A Quick Word From The Author 
+
+//NOT MY ACTUAL WORD TS IS AI -mimi//
 
 Look, I don't have any real financial or accounting knowledge. Most of the "smart" stuff in here came from asking an AI what to do, and I didn't bother to check it on Google. The source code is still the only real documentation.
 
@@ -58,3 +60,4 @@ Basically, do whatever you want with the code. I don't care. Go nuts.
 ### Disclaimer
 
 This is a toy project. It is not financial advice. If you hook this up to a real money account and lose your house, that's 100% on you. Don't be stypyd.
+//YES DON'T BE STYPID -mimi//
