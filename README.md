@@ -1,63 +1,63 @@
-# Stypyd-FX
-stypyd-FX: A ridiculously over-engineered C++/Python trading bot. Features a multithreaded, adaptive engine that's probably smarter than me. An AI wrote the README because I was busy. Don't expect comments.
 
-
-Stypyd-FX
-*(Yes, it's pronounced "stupid-FX")*
-
-Welcome. This is a thing that tries to predict financial markets. It's written in C++ for when you need to calculate a billion things in a nanosecond, and Python for when you need to politely ask the internet for data.
 
 ---
 
-### The Official Description (An AI Wrote This Because I'm Lazy)
+# Stypyd-FX
 
-stypyd-FX is an algorithmic trading signal generator featuring a multithreaded, adaptive strategy engine. It optimizes Simple Moving Average (SMA) and Relative Strength Index (RSI) parameters on the fly using a random search algorithm. For instruments with volume data, it leverages On-Balance Volume (OBV) for trend confirmation and uses a pre-calculated Average True Range (ATR) as a volatility filter to avoid trading in flat markets.
+*(yes, it’s pronounced exactly how you think, and no, I don’t regret it)*
 
-Basically, it's smarter than it looks.
+A C++/Python trading bot that tries very hard to look smart. Multithreaded, adaptive, all the buzzwords. I didn’t write comments because if you need them, you shouldn’t be here.
+Also, this README was written by an AI because I couldn’t be bothered.
 
-### How It Works (The Gist)
+---
 
-1.  A Python script (`datafetch...py`) goes and gets data from Yahoo Finance. It's surprisingly robust.
-2.  The multithreaded C++ program (`signal...cpp`) wakes up, sees the new data, and spawns a bunch of threads like an angry octopus.
-3.  Each thread analyzes a different ticker, running a bunch of simulations to figure out the "best" parameters for right now.
-4.  It spits out a BUY, SELL, or HOLD signal.
-5.  If it's a BUY/SELL, it gets logged to `tradelog.csv`.
-6.  Profit? Maybe.
+### What This Actually Is
 
-### How to Use
+A Frankenstein bot that guesses market moves. C++ does the heavy lifting because Python is slow, but Python fetches the data because C++ shouldn’t have to deal with the internet.
 
-Seriously, if you've cloned this, you probably know what you're doing.
+The strategy engine tunes SMA and RSI parameters using random search (because pretending it’s “AI” makes my skin crawl). If there’s volume data, it waves OBV around like it means something. ATR keeps it from embarrassing itself in flat markets.
 
-1.  **Compile the C++ thing:** //I COMPILED IT FOR LINUX BUT LINUX PEOPLE WOULD COMPILE IT THEMSELVES IN MOST CASES LOL -mimi//
-    ```bash
-    g++ -std=c++17 -pthread -o signal signalv_final.cpp
-    ```
-2.  **Install the Python stuff:** //BRUH WHY AI DIDN'T TELL YOU TO USE VENV -mimi//
-    ```bash
-    pip install pandas yfinance
-    ```
-3.  **Tell it what to trade:** //IF YOU ARE USING YOUR OWN API YOU PROBABLY NEED TO REWRITE PYTHON SCRIPT -mimi//
-    - Edit `conf.txt`. Put tickers in there. One per line.
+Basically, it’s duct tape and overconfidence.
 
-4.  **Run it:**
-    - First, get some data: `python datafetch_final.py`
-    - Then, get some signals: `./signal conf.txt`
+---
 
-### 🧠 A Quick Word From The Author 
+### How It Works (the too-honest version)
 
-//NOT MY ACTUAL WORD TS IS AI -mimi//
+1. Python grabs market data from Yahoo.
+2. C++ wakes up, spawns threads like a caffeinated squid.
+3. Each thread fiddles with parameters until something “optimal” pops out.
+4. Result: BUY, SELL, HOLD.
+5. If it’s BUY/SELL, it dumps into a CSV log.
+6. Profit? Statistically improbable, but sure.
 
-Look, I don't have any real financial or accounting knowledge. Most of the "smart" stuff in here came from asking an AI what to do, and I didn't bother to check it on Google. The source code is still the only real documentation.
+---
 
-As for the win rate or profitability, you'll have to wait for my data or test it yourself. No guarantees it won't lose all your money.
+### How To Use (don’t ask me later)
 
-### 📜 License
+1. Compile the C++ mess:
 
-This project is licensed under the GNU General Public License v3.0.
+   ```bash
+   g++ -std=c++17 -pthread -o signal signalv_final.cpp
+   ```
+2. Install the Python bits:
 
-Basically, do whatever you want with the code. I don't care. Go nuts.
+   ```bash
+   pip install pandas yfinance
+   ```
+3. Edit `conf.txt` with your tickers. If you want to use your own API, congrats, you get to rewrite the script.
+4. Run it:
 
-### Disclaimer
+   * Fetch data: `python datafetch_final.py`
+   * Generate signals: `./signal conf.txt`
 
-This is a toy project. It is not financial advice. If you hook this up to a real money account and lose your house, that's 100% on you. Don't be stypyd.
-//YES DON'T BE STYPID -mimi//
+---
+
+### Important Nonsense
+
+I’m not a financial expert, I barely checked if half the formulas are right, and most of the “smarts” were AI-suggested. The only real documentation is the code itself.
+
+If you connect this to real money and it sets your savings on fire, that’s on you.
+
+License: GPLv3. Do whatever you want, but don’t blame me when it blows up.
+
+---
