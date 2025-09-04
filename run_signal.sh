@@ -4,7 +4,7 @@
 source venv/bin/activate
 
 # Run Python fetcher
-python "datafetchv_6.py"
+python "datafetchv_d.py"
 
 deactivate
 
