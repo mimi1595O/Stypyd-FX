@@ -58,6 +58,6 @@ I’m not a financial expert, I barely checked if half the formulas are right, a
 
 If you connect this to real money and it sets your savings on fire, that’s on you.
 
-License: GPLv3. Do whatever you want, but don’t blame me when it blows up.
+License: GPLv2. Do whatever you want, but don’t blame me when it blows up.
 
 ---
